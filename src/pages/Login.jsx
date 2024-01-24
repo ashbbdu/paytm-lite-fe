@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "../services/operations/userApi";
+// import { login } from "../services/operations/userApi";
 import { loginSchema } from "../validationSchema";
 import { useDispatch } from 'react-redux'
 
@@ -18,7 +18,8 @@ const Login = () => {
     validationSchema : loginSchema ,
     enableReinitialize :true,
     onSubmit: async (values) => {
-      dispatch(login({...values} , navigate))
+      // dispatch(login({...values} , navigate))
+      console.log(values);
     },
   });
   const {errors , touched} = formik;
