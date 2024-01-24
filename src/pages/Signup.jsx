@@ -1,10 +1,8 @@
-import axios from "axios";
+
 import { useFormik } from "formik";
-import React, { useState } from "react";
-import { toast } from "react-hot-toast";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BASE_URL } from "../services/api";
-// import { signup } from "../services/operations/userApi";
+import { register } from "../services/operations/userApi";
 import { ValidationSchema } from "../validationSchema";
 import { useDispatch } from 'react-redux'
 
@@ -22,8 +20,7 @@ const Signup = () => {
     },
     validationSchema: ValidationSchema,
     onSubmit:  (values) => {
-      // dispatch(signup({...values} , navigate));
-      console.log(values);
+      dispatch(register({...values} , navigate));
     },
   });
   const { errors, touched } = formik;

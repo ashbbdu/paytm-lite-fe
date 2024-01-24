@@ -4,7 +4,7 @@ import { SIGNIN_API, SIGNUP_API } from "../api";
 import { apiConnector } from "../apiConnector";
 
 
-export const signup = (data, navigate) => {
+export const register = (data, navigate) => {
   return async (dispatch) => {
     dispatch(setLoading(true));
     try {
@@ -21,7 +21,7 @@ export const signup = (data, navigate) => {
   };
 };
 
-export const login = (data , navigate) => {
+export const signin = (data , navigate) => {
   return async (dispatch) => {
     dispatch(setLoading(true));
     try {
