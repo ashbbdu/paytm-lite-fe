@@ -2,7 +2,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { register } from "../services/operations/userApi";
+import { register } from "../services/operations/userAPI";
 import { ValidationSchema } from "../validationSchema";
 import { useDispatch } from 'react-redux'
 
